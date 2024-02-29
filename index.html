@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="upload-container">
+        <div class="drop-zone">
+            <div class="icon-container">
+                <img class="center" src="Assets/file.svg" alt="file-icon" draggable="false">
+                <img class="left" src="Assets/file.svg" alt="file-icon" draggable="false">
+                <img class="right" src="Assets/file.svg" alt="file-icon" draggable="false">
+            </div>
+            <div class="title">
+                <span class="browseBtn">Upload File</span> <br>
+                <input type="file" id="fileInput" hidden>
+                Or drop a file
+            </div>
+        </div>
+
+        <!-- =====Progress bar===== -->
+        <div class="progress-container">
+            <div class="bg-progress"></div>
+            <div class="inner-container">
+                <div class="uploadTitle">Uploading...</div>
+                <div class="parcent-container"><span id="parcent">0</span>%</div>                
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <!-- ===== Sharing Container ===== -->
+        <div class="sharing-container">
+            <p class="expire">Link expires in 24 hrs</p>
+            <div class="input-container">
+                <input type="text" id="fileUrl" readonly>
+                <img src="Assets/copy-icon.svg" alt="copy-icon" id="copyBtn" draggable="false">
+            </div>
+
+            <!-- ===== Email Form ===== -->
+            <p class="send-email">or Send via Email</p>
+            <div class="email-container">
+                <form id="emailForm">
+                    <div class="field">
+                        <label for="sender">Your Email</label>
+                        <input type="email" name="from-email" id="sender" required>
+                    </div>
+                    <div class="field">
+                        <label for="receiver">Receiver Email</label>
+                        <input type="email" name="to-email" id="receiver" required>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="upload-vector">Sharing File Through EasySharing</div> -->
+    <div class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
